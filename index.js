@@ -24,7 +24,7 @@ handler.do = function (pkg) {
     log.info('link', path.relative(process.cwd(), linkName), '->', dir);
 
     rimraf.sync(linkName);
-    fs.symlinkSync(dir, linkName);
+    fs.symlinkSync(path.resolve(dir), linkName);
   });
 };
 
