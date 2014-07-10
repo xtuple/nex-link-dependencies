@@ -1,6 +1,6 @@
 {
   "name": "nex-link-dependencies",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "nex-link-dependencies =====================",
   "main": "index.js",
   "scripts": {
