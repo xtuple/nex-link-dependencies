@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/tjwebb/nex-link-dependencies/issues"
   },
-  "homepage": "https://github.com/tjwebb/nex-link-dependencies"
+  "homepage": "https://github.com/tjwebb/nex-link-dependencies",
+  "dependencies": {
+    "colors": "^0.6.2"
+  }
 }
