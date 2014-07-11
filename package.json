@@ -25,5 +25,11 @@
     "nex-api": "^2.0.2",
     "npmlog": "^0.1.1",
     "rimraf": "^2.2.8"
-  }
+  },
+  "bundleDependencies": [
+    "colors",
+    "lodash",
+    "npmlog",
+    "rimraf"
+  ]
 }
