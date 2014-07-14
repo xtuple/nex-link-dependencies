@@ -18,7 +18,7 @@ handler.do = function (pkg) {
   _.each(pkg[this.field], function (dir, name) {
     log.info('npm install', name, 'in'.green, dir);
     process.chdir(dir);
-    proc.spawnSync('npm',[ 'install' ], { cwd: dir });
+    proc.spawnSync('npm',[ 'install', '--no-global' ], { cwd: dir });
     process.chdir(global.cwd);
 
     let linkName = path.resolve(process.cwd(), 'node_modules', name);
