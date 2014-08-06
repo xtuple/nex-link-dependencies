@@ -21,7 +21,7 @@ handler.do = function (pkg) {
 
     log.info('npm install', name, 'in'.green, _dir);
     process.chdir(dir);
-    proc.spawnSync('npm',[ 'install', '-f', '--no-global' ], { cwd: dir });
+    proc.spawnSync('npm',[ 'install', '--no-global' ], { cwd: dir });
     process.chdir(global.cwd);
 
     //log.info('link', path.relative(process.cwd(), linkName), '->'.green, dir);
