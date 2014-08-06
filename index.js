@@ -15,10 +15,12 @@ var handler = module.exports = new nex.Handler('linkDependencies');
  * @override
  */
 handler.do = function (pkg) {
-  _.each(pkg[this.field], function (dir, name) {
-    log.info('npm install', name, 'in'.green, dir);
+  _.each(pkg[this.field], function (_dir, name) {
+    var dir = path.resolve(_dir);
+
+    log.info('npm install', name, 'in'.green, _dir);
     process.chdir(dir);
-    proc.spawnSync('npm',[ 'install', '--no-global' ], { cwd: dir });
+    proc.spawnSync('npm',[ 'install', '-f', '--no-global' ], { cwd: dir });
     process.chdir(global.cwd);
 
     let linkName = path.resolve(process.cwd(), 'node_modules', name);
