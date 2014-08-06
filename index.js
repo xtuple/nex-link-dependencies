@@ -16,6 +16,7 @@ var handler = module.exports = new nex.Handler('linkDependencies');
  */
 handler.do = function (pkg) {
   _.each(pkg[this.field], function (_dir, name) {
+    let linkName = path.resolve(process.cwd(), 'node_modules', name);
     var dir = path.resolve(_dir);
 
     log.info('npm install', name, 'in'.green, _dir);
@@ -23,8 +24,8 @@ handler.do = function (pkg) {
     proc.spawnSync('npm',[ 'install', '-f', '--no-global' ], { cwd: dir });
     process.chdir(global.cwd);
 
-    let linkName = path.resolve(process.cwd(), 'node_modules', name);
-    log.info('link', path.relative(process.cwd(), linkName), '->'.green, dir);
+    //log.info('link', path.relative(process.cwd(), linkName), '->'.green, dir);
+    log.info('link', linkName, '->'.green, dir);
 
     rimraf.sync(linkName);
     fs.symlinkSync(path.resolve(dir), linkName);
