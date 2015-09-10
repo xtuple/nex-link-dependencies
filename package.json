@@ -1,6 +1,6 @@
 {
   "name": "nex-link-dependencies",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "nex-link-dependencies =====================",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tjwebb/nex-link-dependencies.git"
+    "url": "git://github.com/xtuple/nex-link-dependencies.git"
   },
   "keywords": [
     "nex"
@@ -16,9 +16,9 @@
   "author": "Travis Webb <me@traviswebb.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tjwebb/nex-link-dependencies/issues"
+    "url": "https://github.com/xtuple/nex-link-dependencies/issues"
   },
-  "homepage": "https://github.com/tjwebb/nex-link-dependencies",
+  "homepage": "https://github.com/xtuple/nex-link-dependencies",
   "dependencies": {
     "colors": "^0.6.2",
     "lodash": "^2.4.1",
